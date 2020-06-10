@@ -1,0 +1,11 @@
+{% extends 'admin/change_list.html' %}
+{% block object-tools %}
+
+  <form action="{% url 'loan_modifier' %}"  id="loan_modifier" name="loan_modifier" method="POST" style="display:inline">
+    {% csrf_token %}
+    <input type="submit" value="Crea noleggio" name="create_loan">
+    <input type="submit" value="Restituzione" name="delete_loan">
+  </form>
+
+  {{ block.super }}
+{% endblock object-tools %}

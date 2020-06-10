@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ricerca</title>
+  </head>
+  <body>
+    {% for auth in search_result %}
+      {{ auth.first_name }}
+      {{auth.country__name}}
+    {% endfor %}
+
+
+  </body>
+</html>
